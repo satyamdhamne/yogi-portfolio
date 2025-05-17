@@ -101,7 +101,7 @@ const projects: Projects = {
     {
       title: "iLU ILU",
       role: "Production Designer",
-      image: "/images/films/iLU ILU.jpeg",
+      image: "/images/films/coming-soon.png",
       description: "Romantic music video concept and design",
       gradient: "from-primary-teal to-primary-yellow",
       link:"https://www.youtube.com/results?search_query=ilu+ilu+trailer"
@@ -243,7 +243,7 @@ export default function FeaturedProjects() {
                             <p className="text-white/70">{project.description}</p>
                           )}
                         </div>                        <div className="absolute bottom-6 left-6 right-6">
-                          {(project.link || (category !== "upcoming films" && category !== "films")) && (
+                          {(project.link || (category !== "upcoming films" && category !== "films" && category !== "songs")) && (
                             <>
                               {project.link ? (
                                 <Link href={project.link} target="_blank" rel="noopener noreferrer">
