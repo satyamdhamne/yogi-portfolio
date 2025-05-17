@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Akshay Narayan | Line Producer",
+  title: "Yogesh Ingle | Production Designer",
   description: "Delivering exceptional production management for film, TV & digital content",
 };
 

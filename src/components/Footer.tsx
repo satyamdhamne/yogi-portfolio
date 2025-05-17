@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import Image from 'next/image';
 
 const socialLinks = [
   { href: 'https://www.instagram.com/', icon: '/assets/social_icons/insta.png', alt: 'Instagram' },
@@ -12,34 +12,41 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 py-10 bg-background border-t border-border">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-gray-400 text-sm"
-        >
-          &copy; {new Date().getFullYear()} Yogesh Ingle. All rights reserved.
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex gap-4"
-        >
-          {socialLinks.map((link) => (
-            <Link key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
-              <motion.img
-                whileHover={{ scale: 1.15, rotate: 6 }}
-                whileTap={{ scale: 0.95 }}
-                src={link.icon}
-                alt={link.alt}
-                className="w-7 h-7 object-contain filter grayscale hover:grayscale-0 transition duration-300"
-              />
-            </Link>
-          ))}
-        </motion.div>
+    <footer className="relative z-10 py-4 bg-transparent">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center justify-center space-y-3">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center space-x-2"
+          >
+            <Image
+              src="/images/logos/lionspire.jpeg"
+              alt="Lionspire Logo"
+              width={30}
+              height={30}
+              className="rounded-full object-cover"
+            />
+            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent font-poppins">
+              Lionspire
+            </h3>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-white/70 text-sm">
+              &copy; {new Date().getFullYear()} Lionspire Innovations.
+            </p>
+            <p className="text-white/50 text-xs">
+              All rights reserved.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </footer>
   );

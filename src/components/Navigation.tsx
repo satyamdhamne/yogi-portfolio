@@ -46,10 +46,9 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
-                <motion.a
-                  key={item.name}
+                <motion.a                  key={item.name}
                   href={item.href}
-                  className="relative text-sm font-medium text-gray-700 hover:text-primary-purple transition-colors"
+                  className="relative text-sm font-medium text-[#90EE90] hover:text-primary-purple transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -93,10 +92,9 @@ export default function Navigation() {
           >
             <div className="p-6 space-y-4">
               {navItems.map((item) => (
-                <motion.a
-                  key={item.name}
+                <motion.a                  key={item.name}
                   href={item.href}
-                  className="block text-gray-700 hover:text-primary-purple font-medium py-2"
+                  className="block text-[#90EE90] hover:text-primary-purple font-medium py-2"
                   whileHover={{ x: 4 }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
